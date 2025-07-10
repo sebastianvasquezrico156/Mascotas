@@ -1,21 +1,21 @@
-CREATE DATABASE veterinaria;
+create database veterinaria;
 
-USE veterinaria;
+use veterinaria;
 
-CREATE TABLE persona (
-    documento VARCHAR(20) PRIMARY KEY,
-    nombre VARCHAR(50),
-    apellido VARCHAR(50),
-    telefono VARCHAR(20),
-    direccion VARCHAR(100)
+create table persona (
+    documento varchar(20) primary key,
+    nombre varchar(50),
+    apellido varchar(50),
+    telefono varchar(20),
+    direccion varchar(100)
 );
 
-CREATE TABLE mascota (
-    codigo VARCHAR(20) PRIMARY KEY,
-    nombre VARCHAR(50),
-    especie VARCHAR(30),
-    raza VARCHAR(50),
-    edad INT,
-    documento_propietario VARCHAR(20),
-    FOREIGN KEY (documento_propietario) REFERENCES persona(documento)
+create table mascota (
+    codigo varchar(20) primary key,
+    nombre varchar(50),
+    especie varchar(30),
+    raza varchar(50),
+    edad int,
+    documento_propietario varchar(20),
+    foreign key (documento_propietario) references persona(documento)
 );
